@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "<!--\r **iocsalalah/iocsalalah** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iocsalalah/iocsalalah.git"
+  },
+  "author": "Rizvi Rishal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iocsalalah/iocsalalah/issues"
+  },
+  "homepage": "https://github.com/iocsalalah/iocsalalah#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js",
+    "start-prod": "node index.js"
+  },
+  "type": "module"
+}
