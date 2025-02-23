@@ -6,7 +6,14 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import mongoose from 'mongoose';
 import path from 'path';
+import upload from 'express-fileupload'
 //routers
+import membersRouter from "./routes/members.js";
+import adminsRouter from "./routes/admins.js";
+import branchRouter from "./routes/branches.js";
+import loginRouter from "./routes/login.js";
+import fileRouter from "./routes/file.js";
+
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,8 +23,15 @@ const app = express();
 app.use(cors({ credentials: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "dist")));
+app.use(upload());
 
 //using the routers
+app.use("/api/members", membersRouter);
+app.use("/api/admins", adminsRouter);
+app.use("/api/branches", branchRouter);
+app.use("/api/login", loginRouter);
+app.use("/api/file", fileRouter);
+
 
 //serving index.html for get request to non existing routes
 app.get("*", function (res) {
