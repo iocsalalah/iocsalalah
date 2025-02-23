@@ -1,0 +1,30 @@
+.modal-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  &.display-none {
+    display: none;
+  }
+
+  .model-layout-main {
+    background: white;
+    padding: 4rem 3rem 3rem 3rem;
+    border-radius: 10px;
+    position: relative;
+    z-index: 999;
+
+    .close-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}

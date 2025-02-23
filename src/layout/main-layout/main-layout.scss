@@ -1,0 +1,20 @@
+.main-layout {
+  height: 100%;
+}
+
+.main-layout-body {
+  display: flex;
+  min-height: 100%;
+
+  .sidebar {
+    flex: 200px;
+    background: #94ff76;
+  }
+
+  .content {
+    flex: calc(100% - 400px);
+    justify-content: center;
+    padding: 3rem 4rem;
+    // background: #FDFFAB;
+  }
+}

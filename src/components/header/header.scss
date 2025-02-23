@@ -1,0 +1,19 @@
+.header {
+  // position: fixed;
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background: #F4c430;
+  color: white;
+
+  .logo {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  .logout {
+    cursor: pointer;
+  }
+}

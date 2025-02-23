@@ -1,0 +1,259 @@
+.id-card-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background: gainsboro;
+}
+
+.front-id {
+  position: relative;
+  // border: 1px solid #f8ff95;
+  background: white;
+  width: 2.125in;
+  height: 3.375in;
+
+  .title {
+    h2 {
+      text-align: center;
+      font-weight: 600;
+      // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      line-height: 14px;
+      letter-spacing: -0.04rem;
+      color: #a42c2eff;
+      font-size: 12px;
+      margin-bottom: 0;
+      position: relative;
+      left: 25px;
+      top: 20px;
+    }
+  }
+
+  .bar {
+    width: 100px;
+    position: relative;
+    margin: auto;
+    left: 25px;
+    top: 25px;
+    height: 0.5px;
+    background: black;
+  }
+
+  .sub-title {
+    p {
+      // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      font-weight: 600;
+      text-align: center;
+      font-size: 8px;
+      color: #141414;
+      position: relative;
+      left: 25px;
+      top: 30px;
+    }
+  }
+
+  .photo {
+    position: relative;
+    left: 18px;
+    top: 50px;
+    text-align: center;
+
+    img {
+      position: relative;
+      z-index: 555;
+      border-radius: 100%;
+      border: 4px solid #fdcd0cff;
+      width: 90px;
+      height: 90px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .front-info {
+    position: relative;
+    padding-left: 40.795px;
+    z-index: 200;
+    text-align: center;
+    letter-spacing: -0.01rem;
+    color: #2b2358ff;
+
+    .name {
+      position: relative;
+      font-weight: 600;
+      top: 50px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .branch {
+      color: #3b3b3b;
+      position: relative;
+      top: 40px;
+      font-weight: 600;
+      font-size: 9px;
+      margin-bottom: 10px;
+    }
+
+    .id {
+      position: relative;
+      color: #3b3b3b;
+      top: 40px;
+      font-weight: 600;
+      font-size: 10px;
+    }
+  }
+
+  .footer {
+    .expiry-date {
+      position: absolute;
+      z-index: 200;
+      right: 10px;
+      bottom: 10px;
+      color: #3b3b3b;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  }
+
+  .id-logo {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    z-index: 117;
+
+    img {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  .id-side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 107;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .id-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.back-id {
+  position: relative;
+  // border: 1px solid #f8ff95;
+  background: white;
+  width: 2.125in;
+  height: 3.375in;
+  // margin: 1rem;
+
+  .family-info {
+    position: relative;
+    text-align: center;
+    top: 150px;
+    z-index: 200;
+    letter-spacing: -0.01rem;
+    padding-left: 40.795px;
+
+    .family-title {
+      font-size: 10px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      // padding-right: 35px;
+      color: brown;
+    }
+
+    .family-member-name {
+      font-size: 9px;
+      margin-bottom: 2px;
+      // margin-left: -27px;
+    }
+
+    .blood {
+      margin-top: 11px;
+    }
+
+    .phone {
+      margin-top: 11%;
+    }
+  }
+
+  .back-details {
+    font-size: 9px;
+    position: absolute;
+    z-index: 500;
+    bottom: 40px;
+    right: 30px;
+
+    .dob,
+    .blood {
+      margin-bottom: 3px;
+    }
+  }
+
+  .footer {
+    .expiry-date {
+      position: absolute;
+      z-index: 200;
+      right: 10px;
+      bottom: 10px;
+      color: #3b3b3b;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  }
+
+  .id-logo {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    z-index: 117;
+
+    img {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  .id-side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 107;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .id-back {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
