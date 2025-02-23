@@ -20,7 +20,7 @@ loginRouter.post("/", async (req, res) => {
 
     // Compare the entered password with the hashed password in the database
     const isPasswordMatch = await bcrypt.compare(
-      password,
+      hashedPassword,
       admin.hashedPassword
     );
 
