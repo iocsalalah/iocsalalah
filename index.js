@@ -34,7 +34,7 @@ app.use("/api/file", fileRouter);
 
 
 //serving index.html for get request to non existing routes
-app.get("*", function (res) {
+app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
