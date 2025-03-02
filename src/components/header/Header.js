@@ -1,7 +1,10 @@
+//imports...
 import React, { Fragment, useState } from "react";
 import "./header.scss";
 import { Link } from "react-router";
 import LogoutModal from "./logout-modal/LogoutModal";
+
+
 
 export default function Header() {
   let [logoutModal, setLogoutModal] = useState(false);
@@ -14,7 +17,7 @@ export default function Header() {
     <Fragment>
       <div className="header">
         <Link to="/">
-          <div className="logo">IOC Salalah</div>
+          <div className="logo">IOC Salalah Kerala Chapter</div>
         </Link>
         <div className="logout" onClick={onLogout}>
           Logout

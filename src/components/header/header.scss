@@ -5,8 +5,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-  background: #F4c430;
-  color: white;
+  background: linear-gradient(to bottom, #FF9933 33.33%, #FFFFFF 33.33% 66.66%, #138808 66.66%);
+  color: black;
+  font-weight: bold;
+
 
   .logo {
     font-weight: 500;
@@ -15,5 +17,8 @@
 
   .logout {
     cursor: pointer;
+
+
+
   }
 }

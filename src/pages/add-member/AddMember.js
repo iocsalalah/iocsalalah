@@ -147,7 +147,7 @@ export default function AddMember() {
   };
 
   return (
-    <form onSubmit={onFormSubmit}>
+    <form className="AddMember" onSubmit={onFormSubmit}>
       <div className="add-member">
         <h2>
           Add Member
