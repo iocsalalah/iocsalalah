@@ -10,7 +10,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   let [formData, setFormData] = useState({});
-  const [submitBtn, setSubmitBtn] = useState(0);
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   let onInputChange = async (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,13 +18,15 @@ export default function Login() {
 
   let onFormSubmit = async (e) => {
     e.preventDefault();
-    setSubmitBtn(1);
     try {
+      setIsLoggingIn(true);
       await api.post("login", formData);
       localStorage.setItem("isLoggedIn", true);
+      setIsLoggingIn(false);
       navigate("/");
     } catch (e) {
       alert("Invalid Credentials!");
+      setIsLoggingIn(false);
     }
   };
 
@@ -55,8 +57,13 @@ export default function Login() {
             required
             onChange={onInputChange}
           />
-          <Button type="submit" variant="contained" fullWidth>
-            {submitBtn ? "loggin in..." : "Login"}
+          <Button
+            type="submit"
+            variant="contained"
+            fullWidth
+            disabled={isLoggingIn}
+          >
+            {isLoggingIn ? "loggin in..." : "Login"}
           </Button>
         </div>
       </div>
