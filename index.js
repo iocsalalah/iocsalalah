@@ -45,7 +45,7 @@ mongoose.connect(process.env.DATABASE_URL);
 
 //starting the server
 const renderPort = process.env.PORT;
-const localPort = 5000;
+const localPort = 5002;
 app.listen(renderPort || localPort, () => {
     if (renderPort)
         console.log(`Server started at https://iocsalalah.onrender.com/ \nPort: ${renderPort}`);
