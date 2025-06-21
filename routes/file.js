@@ -25,6 +25,7 @@ async function uploadFile(file) {
     Key: `${Date.now()}-${file.name}`, // put all image to fileupload folder with name scanskill-${Date.now()}${file.name}`
     Body: file.data,
     ACL: "public-read",
+    ContentType: file.mimetype, // set the content type of the file
   };
   const data = await s3.upload(params).promise();
   return data.Location; // returns the url location
