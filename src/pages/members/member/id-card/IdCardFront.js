@@ -6,6 +6,7 @@ import idlogo from "../../../../assets/id-card/id-logo.png";
 import userIcon from "../../../../assets/user.png";
 import { toDateView } from "../../../../services/toDateView.js";
 
+
 export const IdCardFront = React.forwardRef((props, ref) => {
   let { member } = props;
 
@@ -19,15 +20,6 @@ export const IdCardFront = React.forwardRef((props, ref) => {
       </div>
 
       <div className="bar"></div>
-
-      <div className="sub-title">
-        <p>
-          <em>"Educate and Enlighten</em>
-        </p>
-        <p>
-          <em>Organize and Strengthen"</em>
-        </p>
-      </div>
 
       <div className="photo">
         {member.photo && member.photo.includes("http") ? (

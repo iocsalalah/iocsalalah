@@ -50,6 +50,7 @@ export default function EditBranchModal({ show, closeModal, branch }) {
               fullWidth
               style={{ textTransform: "none", fontSize: "1rem" }}
               type="submit"
+              disabled={submitBtn}
             >
               {submitBtn ? "Updating..." : "Update"}
             </Button>

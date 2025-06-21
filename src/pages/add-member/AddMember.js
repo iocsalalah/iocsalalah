@@ -24,6 +24,7 @@ export default function AddMember() {
   const [branches, setBranches] = React.useState([]);
   const [code, setCode] = React.useState();
   const [file, setFile] = useState(null);
+  const [isAddButtonLoading, setIsAddButtonLoading] = useState(false);
   const [isBranchFetched, setIsBranchFetched] = useState(false);
   const [isCodeFetched, setIsCodeFetched] = useState(false);
 
@@ -74,12 +75,7 @@ export default function AddMember() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   let onFormSubmit = async (e) => {
-    console.log("\n\n");
-    console.log("onFormSubmit function is running...");
-    console.log("Received 1 parameter");
-    console.log("1.Event:");
-    console.log(e);
-
+    setIsAddButtonLoading(true);
     e.preventDefault();
     if (file) {
       console.log("file exists")
@@ -127,8 +123,10 @@ export default function AddMember() {
           family_members: familyFormData,
         });
       }
+      setIsAddButtonLoading(false);
     } catch (e) {
       console.log(e);
+      setIsAddButtonLoading(false);
     }
     console.log("function end...")
     console.log("\n\n");
@@ -634,6 +632,7 @@ export default function AddMember() {
                 fullWidth
                 style={{ textTransform: "none", fontSize: "1rem" }}
                 type="submit"
+                disabled={isAddButtonLoading}
               >
                 {submitBtn ? "Adding..." : "Add Member"}
               </Button>

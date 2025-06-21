@@ -39,6 +39,7 @@ export default function MemberDeleteModal({ closeModal, show, member }) {
               fontSize: "1rem",
             }}
             onClick={() => onDelete(member?._id)}
+            disabled={submitBtn}
           >
             {submitBtn ? "Deleting..." : "Delete"}
           </Button>

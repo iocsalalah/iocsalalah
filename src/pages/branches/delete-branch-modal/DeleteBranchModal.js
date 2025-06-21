@@ -30,6 +30,7 @@ export default function DeleteBranchModal({ closeModal, show, branch }) {
               fontSize: "1rem",
             }}
             onClick={() => onDelete(branch?._id)}
+            disabled={submitBtn}
           >
             {submitBtn ? "Deleting..." : "Delete"}
           </Button>

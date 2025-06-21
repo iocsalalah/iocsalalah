@@ -25,6 +25,21 @@ import extractFilenameFromUrl from "../../../services/getFileNameFromUrl.js";
 export default function Member() {
   const { id } = useParams();
 
+  const Photo = () => {
+    console.log("member.photo: ");
+    console.log(member.photo);
+    if (member.photo && member.photo.includes("http")) {
+      return (
+        <img src={member.photo} alt="User" />
+      )
+    }
+    else {
+      return (
+        <img src={userIcon} alt="User" />
+      )
+    }
+  }
+
   useEffect(() => {
     let fetchMember = async () => {
       let { data } = await api.get("members/" + id);
@@ -48,6 +63,7 @@ export default function Member() {
       }
     };
     fetchMember();
+
   }, [id]);
 
   const [member, setMember] = React.useState({});
@@ -142,11 +158,7 @@ export default function Member() {
           </div>
 
           <div className="photo">
-            {member.photo && member.photo.includes("http") ? (
-              <img src={member.photo} alt="User" />
-            ) : (
-              <img src={userIcon} alt="User" />
-            )}
+            <Photo />
           </div>
           <div className="row">
             <p>

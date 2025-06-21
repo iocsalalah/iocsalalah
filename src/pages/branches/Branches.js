@@ -96,6 +96,7 @@ export default function Branches() {
               style={{ textTransform: "none", fontSize: "1rem" }}
               fullWidth
               type="submit"
+              disabled={submitBtn}
             >
               {submitBtn ? "Adding..." : "Add"}
             </Button>
